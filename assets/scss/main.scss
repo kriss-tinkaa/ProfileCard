@@ -1,0 +1,146 @@
+@import 'normalize';
+@import 'variable';
+@import 'typography';
+@import 'header';
+@import 'footer';
+@import 'section';
+
+
+body {
+    font: 400 16px/1.5 $fmain;
+    color: $main-color;
+    min-width: 320px;
+    background-color: #f3f3f3;
+
+    &.active {
+        overflow: hidden;
+    }
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+aside{
+    width: 290px;
+    @media screen and (max-width: 1024px){
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+main{
+    
+    max-width: calc(100% - 320px);
+    width: 100%;
+    @media screen and (max-width: 1024px){
+        max-width: 100%;
+    }
+}
+
+section {
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e1e1e1;
+
+    @media screen and (max-width: 767px) {
+        //padding: 40px 0;
+    }
+}
+
+.sections-block{
+    background-color: #fff;
+    padding: 30px 20px 20px;
+    margin-bottom: 30px;
+}
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 130px;
+    flex: 1;
+    @media screen and (max-width: 1024px){
+        flex-direction: column;
+    }
+}
+
+a {
+    color: $main-color;
+}
+
+
+.btn {
+    font: 400 1rem/1 $fmain;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 35px;
+    padding: 9px 10px;
+    min-width: 160px;
+
+    &-primary {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        color: #fff;
+        height: 38px;
+        padding-left: 22px;
+        padding-right: 22px;
+
+        &:hover {
+            background-color: transparent;
+            color: $secondary-color;
+        }
+    }
+
+    &-transparent {
+        border: 2px solid #ADADAD;
+        color: $secondary-color;
+
+        &:hover {
+            border-color: #6C5CE7;
+            background-color: #6C5CE7;
+            color: #fff;
+        }
+    }
+
+    &-secondary {
+        background: #6C5CE7;
+        border-radius: 999px;
+        color: #fff;
+
+        &:hover {
+            background: #fff;
+            border: 1px solid #6C5CE7;
+            color: #6C5CE7;
+        }
+    }
+
+    &-lg {
+        font: 800 1.5rem/1.5 $fmain_b;
+        letter-spacing: 0.25px;
+    }
+
+    &-sm {
+        min-width: 120px;
+        max-width: 150px;
+        height: 48px;
+        font-weight: 700;
+    }
+}
+
+
+
+
+
