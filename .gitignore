@@ -6,6 +6,5 @@
 .idea/vcs.xml
 webpack.iml
 .idea/watcherTasks.xml
-dist/
 node_modules/
 package-lock.json
